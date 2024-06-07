@@ -16,7 +16,7 @@ if response.status_code == 200:
     for article in articles:
         print(article.get_text(strip=True))
 else:
-    print(f"Failed to retrieve the webpage. Status code: {response.status_code}")
+    print(f"Failed to retrieve the webpage. Status code: {response.status_code}") p
 
 
 
