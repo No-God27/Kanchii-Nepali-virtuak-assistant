@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>कान्छी - Speech Recognition App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <img src="kanchi.png" height="100px" width="100px" /><img
+          src="kanchhi text.png"
+          height="80px"
+          width="165px"
+        />
+      </h1>
+      <nav>
+        <ul>
+          <a href="#about" style="margin-left: 200px">हाम्रो बारे</a>
+          <a href="#contact" style="margin-right: 300px">सम्पर्क</a>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="intro">
+        <h2><b>तपाइलाई स्वागत छ</b></h2>
+        <p><b>कान्छी सुन्न तयार छे</b></p>
+      </section>
+      <section class="controls">
+        <button id="start-btn"><u>बोल्न सुरु</u></button>
+        <button id="stop-btn" disabled><u>बोल्न बन्द</u></button>
+      </section>
+      <section class="output">
+        <p id="speech-output">
+          <b>सुरु गर्नाको लागी "बोल्न सुरु" थिच्नुहोस्</b>
+        </p>
+        <h3>सुनेको कुराहरु:</h3>
+        <br /><br /><br /><br />
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 कान्छी</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
