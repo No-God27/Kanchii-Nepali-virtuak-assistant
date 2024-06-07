@@ -1,20 +1,20 @@
 import requests
 
-def fetchnews(apikey, query):
+def fetch_news(api_key, query):
     url = 'https://newsapi.org/v2/everything'
     params = {
         'q': query,
-        'apiKey': apikey
+        'apiKey': api_key
     }
     response = requests.get(url, params=params)
     return response.json()
 
-if _name == "__main":
-    api_key = 'e9a2e6d96b394574b3a5f77c6414fb95'  # Replace with your NewsAPI API key
-    query = 'नेपाल'  # Example query in Nepali
+if __name__ == "__main__":
+    api_key = 'e9a2e6d96b394574b3a5f77c6414fb95'
+    query = 'नेपाल'
     news = fetch_news(api_key, query)
 
-    # Print the full response for debugging
+
     print(news)
 
     if 'articles' in news:

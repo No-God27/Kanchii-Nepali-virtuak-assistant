@@ -1,8 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 
-#url : kantipur ko website
-
 url = 'https://ekantipur.com/'
 
 response = requests.get(url)
@@ -22,4 +20,3 @@ else:
 
 
 
-1
