@@ -1,4 +1,3 @@
-// Ensure the browser supports the Web Speech API
 if (!("webkitSpeechRecognition" in window)) {
   alert(
     "Web Speech API is not supported by this browser. Please upgrade to the latest version of Chrome."
@@ -24,7 +23,6 @@ if (!("webkitSpeechRecognition" in window)) {
       const transcript = event.results[i][0].transcript;
       if (event.results[i].isFinal) {
         speechOutput.textContent = transcript;
-        // Add your task performing logic here
       } else {
         interimTranscript += transcript;
       }
