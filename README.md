@@ -1,4 +1,4 @@
-The entire project is comanpiled d saved in the ui folder 
+The entire project is compiled and saved in the ui folder 
 
 
 
