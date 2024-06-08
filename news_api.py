@@ -5,7 +5,7 @@ def fetch_news(api_key, query):
     params = {
         'q': query,
         'apiKey': api_key,
-        'language': 'ne',  # Specify Nepali language
+        'language': 'ne',  # Specidy Nepali language
         'pageSize': 5  # Limit the number of articles to 5
     }
     response = requests.get(url, params=params)

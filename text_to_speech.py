@@ -3,20 +3,20 @@ import io
 import pygame
 
 def speak_text(text):
-    # Convert text to speech in Nepali
+
     tts = gTTS(text=text, lang='ne')
     # Save the audio to an in-memory file
     mp3_fp = io.BytesIO()
     tts.write_to_fp(mp3_fp)
     mp3_fp.seek(0)
 
-    # Initialize pygame mixer
+
     pygame.mixer.init()
 
-    # Load the sound from the in-memory file
+
     pygame.mixer.music.load(mp3_fp, 'mp3')
 
-    # Play the sound
+
     pygame.mixer.music.play()
 
     # Wait until the sound finishes playing
