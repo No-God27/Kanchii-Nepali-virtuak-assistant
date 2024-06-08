@@ -16,17 +16,15 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Kanchhi")
         self.setGeometry(100, 100, 800, 600)
 
-        # To store recent notes file paths
+
         self.recent_notes = []
 
-        # Main widget container
+
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
 
-        # Main layout
-        self.main_layout = QVBoxLayout(self.central_widget)
 
-        # Tab widget for main content area
+        self.main_layout = QVBoxLayout(self.central_widget)
         self.tabs = QTabWidget()
         self.home_widget = self.create_home_widget()
         self.settings_widget = self.create_settings_widget()
@@ -35,11 +33,7 @@ class MainWindow(QMainWindow):
         self.tabs.addTab(self.home_widget, "Home")
         self.tabs.addTab(self.settings_widget, "History")
         self.tabs.addTab(self.notes_widget, "Notes")
-
-        # Add tabs to main layout
         self.main_layout.addWidget(self.tabs)
-
-        # Apply stylesheets
         self.apply_stylesheet()
 
     def create_home_widget(self):

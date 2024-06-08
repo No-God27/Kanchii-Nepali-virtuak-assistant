@@ -12,7 +12,7 @@ def process_command(text):
     session_id = str(uuid.uuid4())
     language_code = "ne"
 
-    # Detect the intent using Dialogflow
+    #
     intent_response, intent_name = detect_intent_texts(project_id, session_id, text, language_code)
     print(f"Intent: {intent_name}, Response: {intent_response}")
 

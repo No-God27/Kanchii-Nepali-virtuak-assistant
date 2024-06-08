@@ -9,7 +9,7 @@ class Ui_HomePage(QtWidgets.QWidget):
     def __init__(self, parent=None):
         super(Ui_HomePage, self).__init__(parent)
         self.setupUi(self)
-        self.listen_lock = threading.Lock()  # Add a lock for the listen method
+        self.listen_lock = threading.Lock()
 
     def setupUi(self, widget):
         self.recognizer = sr.Recognizer()
