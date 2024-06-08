@@ -31,7 +31,7 @@ def translate_to_nepali(text):
 
 def main():
     api_key = 'df1eeea1f46f844b92291f4c88c03641'
-    city = 'Kathmandu'
+    city = ('pokhara')
     weather_info = get_weather(api_key, city)
     if weather_info:
         print(city,'को मौसम को स्थिति एस्तो रहेको छ। ' )
