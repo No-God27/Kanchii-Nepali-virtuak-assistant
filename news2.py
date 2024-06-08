@@ -12,7 +12,7 @@ if response.status_code == 200:
     for headline in headlines:
         print(headline.get_text(strip=True))
 else:
-        print('Article cannot be fetched')
+        print('Article cannot be found')
 
 
 
