@@ -1,1 +1,0 @@
-# Kanchii-Nepali-virtuak-assistant
