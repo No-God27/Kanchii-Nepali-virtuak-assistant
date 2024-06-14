@@ -16,15 +16,17 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Kanchhi")
         self.setGeometry(0, 0, 1920,1080)
 
-
+        # To store recent notes file paths
         self.recent_notes = []
+
+        # Main widget container
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
 
-
+        # Main layout
         self.main_layout = QVBoxLayout(self.central_widget)
 
-
+        # Tab widget for main content area
         self.tabs = QTabWidget()
         self.home_widget = self.create_home_widget()
         self.settings_widget = self.create_settings_widget()
@@ -34,8 +36,10 @@ class MainWindow(QMainWindow):
         self.tabs.addTab(self.settings_widget, "History")
         self.tabs.addTab(self.notes_widget, "Notes")
 
-
+        # Add tabs to main layout
         self.main_layout.addWidget(self.tabs)
+
+        # Apply stylesheets
         self.apply_stylesheet()
 
     def create_home_widget(self):
@@ -161,6 +165,7 @@ class MainWindow(QMainWindow):
                 font-size: 50px;  /* Make the font size bigger */
                 color: black;
             }
+            
             QTextEdit#notesTextEdit {  /* Specific styling for the notes QTextEdit */
                 background-color: whitesmoke;
                 border: 1px solid gray;
@@ -177,7 +182,7 @@ class MainWindow(QMainWindow):
                 text-align: center;
                 text-decoration: none;
                 display: inline-block;
-                font-size: 14px;
+                font-size: 16px;
                 margin: 4px 2px;
                 transition-duration: 0.4s;
                 cursor: pointer;
@@ -185,9 +190,8 @@ class MainWindow(QMainWindow):
                 box-shadow: 0 4px gray;  /* Add a shadow */
             }
             QPushButton#startButton:hover, QPushButton#saveButton:hover {
-                background-color: white;
-                color: black;
-                border: 2px solid green;
+                background-color: #1E4620;
+                color: #EEEEEE;
             }
             QPushButton#startButton:active, QPushButton#saveButton:active {
                 background-color: darkgreen;
@@ -199,8 +203,10 @@ class MainWindow(QMainWindow):
                 background-color: white;
                 padding: 5px;
             }
+            
         """
         self.setStyleSheet(stylesheet)
+
 
 def main():
     app = QApplication(sys.argv)

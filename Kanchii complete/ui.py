@@ -14,17 +14,19 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         self.setWindowTitle("Kanchhi")
-        self.setGeometry(0, 0, 1920,1080)
+        self.setGeometry(100, 100, 800, 600)
 
-
+        # To store recent notes file paths
         self.recent_notes = []
+
+        # Main widget container
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
 
-
+        # Main layout
         self.main_layout = QVBoxLayout(self.central_widget)
 
-
+        # Tab widget for main content area
         self.tabs = QTabWidget()
         self.home_widget = self.create_home_widget()
         self.settings_widget = self.create_settings_widget()
@@ -34,8 +36,10 @@ class MainWindow(QMainWindow):
         self.tabs.addTab(self.settings_widget, "History")
         self.tabs.addTab(self.notes_widget, "Notes")
 
-
+        # Add tabs to main layout
         self.main_layout.addWidget(self.tabs)
+
+        # Apply stylesheets
         self.apply_stylesheet()
 
     def create_home_widget(self):
@@ -154,11 +158,11 @@ class MainWindow(QMainWindow):
                 font-weight: bold;
             }
             QLabel {
-                font-size: 22px;
+                font-size: 16px;
                 color: black;
             }
-            QLabel#SwagatamLabel {  /* Specific styling for the welcome label */
-                font-size: 50px;  /* Make the font size bigger */
+            QLabel#welcomeLabel {  /* Specific styling for the welcome label */
+                font-size: 24px;  /* Make the font size bigger */
                 color: black;
             }
             QTextEdit#notesTextEdit {  /* Specific styling for the notes QTextEdit */
